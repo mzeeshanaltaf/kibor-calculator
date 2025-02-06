@@ -21,7 +21,7 @@ kibor_periods = """
         <th>Kibor Rate</th>
     </tr>
     <tr>
-        <td>26-Nov-2023</td>
+        <td>26-Jul-2023</td>
         <td>10-Jun-2024</td>
         <td>22.0%</td>
     </tr>
