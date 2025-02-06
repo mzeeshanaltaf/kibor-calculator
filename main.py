@@ -43,7 +43,17 @@ if payment_option == 'Partial Payment Booking':
         if pp_amount is None or rp_amount is None:
             st.warning('Enter the Partial or Remaining Payment Amount!', icon=":material/warning:")
         else:
-            st.write(pp_date, rp_date, vd_date)
+            compensation = calculate_compensation_with_partial_payments(pp_amount, pp_date, rp_amount, rp_date, vd_date)
+            compensation = round(compensation)  # Round to nearest integer
+
+            st.subheader('Total Compensation💰')
+
+            if compensation == -1:
+                output = ":blue[*No delay in delivery, no compensation required.*]"
+                st.write(output)
+            else:
+                st.write(":blue[*Company owes approximately the following amount to you for delayed delivery:*]")
+                st.metric('Compensation Amount', value=f"PKR {compensation:,}/=", label_visibility="collapsed")
 
 if payment_option == 'Full Payment Booking':
     st.subheader('Payment Amount and Dates💳📅')
