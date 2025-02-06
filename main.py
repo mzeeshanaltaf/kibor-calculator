@@ -59,6 +59,7 @@ if payment_option == 'Partial Payment Booking':
             else:
                 st.write(":blue[*Company owes approximately the following amount to you for delayed delivery:*]")
                 st.metric('Compensation Amount', value=f"PKR {compensation:,}/=", label_visibility="collapsed")
+                disclaimer()
 
 # Configuration options and compensation calculation if user selects full payment
 if payment_option == 'Full Payment Booking':
@@ -72,6 +73,7 @@ if payment_option == 'Full Payment Booking':
     vd_date = st.date_input('Vehicle Delivery Date:', value="today", max_value="today", min_value=fp_date,
                             key='vehicle_full_payment')
     calculate = st.button('Calculate', type='primary', icon=":material/calculate:", key='button_full_payment')
+
     if calculate:
         if fp_amount is None:
             st.warning('Enter the Full Payment Amount!', icon=":material/warning:")
@@ -87,3 +89,4 @@ if payment_option == 'Full Payment Booking':
             else:
                 st.write(":blue[*Company owes approximately the following amount to you for delayed delivery:*]")
                 st.metric('Compensation Amount', value=f"PKR {compensation:,}/=", label_visibility="collapsed")
+                disclaimer()

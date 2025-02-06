@@ -11,7 +11,7 @@ main_page = st.Page(
 
 faq_page = st.Page(
     "faqs.py",
-    title="FAQs",
+    title="About",
     icon=":material/help:",
 )
 

@@ -105,3 +105,10 @@ def display_footer():
     </div>
     """
     st.sidebar.markdown(footer, unsafe_allow_html=True)
+
+def disclaimer():
+    st.subheader("Disclaimer")
+    st.info("This application provides an estimated compensation amount based on available KIBOR rates and general guidelines. "
+             "The actual compensation may vary depending on company policies, legal terms, and specific agreements. "
+             "Users are advised to verify calculations with the relevant authorities before making any claims.",
+            icon=":material/info:")
