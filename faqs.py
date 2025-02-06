@@ -65,7 +65,7 @@ faq_data = {
 
         'Are there any guidelines/regulations from Government regarding compensation for delayed delivery?':
             '<p>Yes, as per Auto Industry Development and Export Policy (AIDEP), vehicle manufacturer will pay compulsory '
-            'payment of KIBOR + 3% interest on initial deposited amount in case of deliver beyond 60 days. For details, '
+            'payment of KIBOR + 3% interest on initial deposited amount in case of delivery beyond 60 days. For details, '
             'refer to Sr. No 4 of the <a href="https://engineeringpakistan.com/wp-content/uploads/2021/12/AIDEP-Incentives-Final-221221-modified.pdf">AIDEP</a> policy.',
 
         'What is the KIBOR?':

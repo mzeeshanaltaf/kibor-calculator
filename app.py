@@ -11,14 +11,14 @@ main_page = st.Page(
 
 faq_page = st.Page(
     "faqs.py",
-    title="About",
+    title="FAQs",
     icon=":material/help:",
 )
 
 
 pg = st.navigation({
     "Home": [main_page],
-    "FAQs": [faq_page],
+    "About": [faq_page],
                     })
 
 pg.run()
