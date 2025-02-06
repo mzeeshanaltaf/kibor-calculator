@@ -1,5 +1,4 @@
 import streamlit as st
-import datetime
 from util import *
 
 # Page title of the application
@@ -16,15 +15,21 @@ their car delivery is delayed beyond 60 days. Simply enter your deposit amount, 
 and the app will compute the amount the company owes you based on the KIBOR rate + 3%. 🚘📅💲*
 """)
 
+# Display footer in the sidebar
+display_footer()
+
+# Configuration options
 st.header('Configuration⚙️:', divider="gray")
 st.subheader('Booking Type📝')
 payment_option = st.radio('**Booking Type:**', ['Partial Payment Booking', 'Full Payment Booking'], horizontal=True,
                           label_visibility="collapsed")
 
+# Default dates
 jan_1_2024 = datetime.date(2024, 1, 1)
 oct_1_2024 = datetime.date(2024, 10, 1)
 oct_1_2023 = datetime.date(2023, 10, 1)
 
+# Configuration options and compensation calculation if user selects partial payment
 if payment_option == 'Partial Payment Booking':
     st.subheader('Payment Amount and Dates💳📅')
     col1, col2 = st.columns(2, border=True)
@@ -55,6 +60,7 @@ if payment_option == 'Partial Payment Booking':
                 st.write(":blue[*Company owes approximately the following amount to you for delayed delivery:*]")
                 st.metric('Compensation Amount', value=f"PKR {compensation:,}/=", label_visibility="collapsed")
 
+# Configuration options and compensation calculation if user selects full payment
 if payment_option == 'Full Payment Booking':
     st.subheader('Payment Amount and Dates💳📅')
     fp_amount = st.number_input('Full Payment Amount:', min_value=0, max_value=10_000_000, value=8_390_000, step=100_000,
