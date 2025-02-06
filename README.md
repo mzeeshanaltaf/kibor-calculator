@@ -26,4 +26,4 @@ You must have Python 3.11 or later installed.
    `streamlit run main.py`
 
 # Screen Shots
-(![img.png](img.png))
+![img.png](img.png)
