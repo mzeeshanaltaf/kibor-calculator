@@ -8,7 +8,7 @@ the app will compute the amount the company owes you based on the
 KIBOR rate + 3%. 🚘📅💲
 
 # Application Link
--
+https://kibor-calculator.streamlit.app/
 
 # Technologies Used
 * streamlit -- Front end development
@@ -27,3 +27,5 @@ You must have Python 3.11 or later installed.
 
 # Screen Shots
 ![img.png](img.png)
+![img_1.png](img_1.png)
+![img_2.png](img_2.png)
