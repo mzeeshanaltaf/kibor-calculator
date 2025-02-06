@@ -23,7 +23,7 @@ You must have Python 3.11 or later installed.
    `pip install -r requirements.txt`
 4. Run the application with following command from terminal:
 
-   `streamlit run main.py`
+   `streamlit run app.py`
 
 # Screen Shots
 ![img.png](img.png)
